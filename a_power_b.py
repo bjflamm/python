@@ -13,4 +13,11 @@ def a2(a,b):
         num1 = num1 * num1
     return num1
 
-print(a2(2,3))
+def power(a,b):
+    num = 1;
+    while b>0:
+        num = num * a;
+        b = b - 1;
+    return num;
+
+print(power(2,3))
