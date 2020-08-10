@@ -17,3 +17,24 @@ class Solution(object):
                 curr_mode = num
                 
         return curr_mode
+
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        num_list = {}
+        num_array = []
+        length = len(nums)
+        
+        for num in nums:
+            if num not in num_list:
+                num_list[num] = 1
+            else:
+                num_list[num] += 1
+            if num_list[num] > (length/3) and num not in num_array:
+                num_array.append(num)
+                
+        return num_array
+        
